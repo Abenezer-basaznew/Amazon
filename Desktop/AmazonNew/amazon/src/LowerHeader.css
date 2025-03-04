@@ -1,0 +1,19 @@
+.LowerHeader__div{
+    background-color: black;
+    color: white;
+
+}
+.LowerHeader__Ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.LowerHeader__Ul li{
+   padding: 8px;
+}
+.LowerHeader__div ul li:first-child{
+    display: flex;
+    gap: 2px;
+    align-items:center;
+    
+}

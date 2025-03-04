@@ -68,3 +68,24 @@ body {
 .header__clearlink {
 	text-decoration: none;
 }
+.header__optionBasket{
+position: relative;
+}
+.header__optionBasket span{
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    font-size: 20px;
+    left: 16px;
+    color: orange;
+}
+
+
+
+.header__nav :hover,
+.header__option :hover,
+.header__option :hover,
+.header__logo:hover{
+	border: 1px solid white;
+	border-radius: 3px;
+}
