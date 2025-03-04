@@ -10,7 +10,7 @@ const LowerHeader = () => {
           <i>
             <FiAlignJustify />
           </i>
-          <p>all</p>
+          <p>ALL</p>
         </li>
         <li>Today's Deals</li>
         <li>Customer service</li>

@@ -7,7 +7,7 @@
     display: flex;
     list-style: none;
     gap: 20px;
-}
+}           
 .LowerHeader__Ul li{
    padding: 8px;
 }
@@ -17,3 +17,8 @@
     align-items:center;
     
 }
+  @media screen and (max-width:570px){
+   .LowerHeader__div ul li:not(:first-child){
+    display: none;
+   }
+  }
