@@ -3,28 +3,34 @@ import axios from "axios";
 import ProductCard from "./ProductCard";
 import classes from "./Product.module.css";
 // import Loader from "../Loader/Loader";
-
 function Product_main() {
-  const [products, setProducts] = useState();
-  // const [isLoading, setIsLoading] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
       .then(res => {
         setProducts(res.data);
-        // setIsLoading(false);
+        setIsLoading(false);
       })
       .catch(err => {
         console.log(err);
-        // setIsLoading(false);
+        setIsLoading(false);
       });
   }, []);
 
-  return <section className={classes.products_container}>
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <section className={classes.products_container}>
       {products.map(singleProduct => {
-        return <ProductCard product={singleProduct} key={singleProduct.id} />;
+        return <ProductCard key={singleProduct.id} product={singleProduct} />;
       })}
-    </section>;
+    </section>
+  );
 }
 
 export default Product_main;

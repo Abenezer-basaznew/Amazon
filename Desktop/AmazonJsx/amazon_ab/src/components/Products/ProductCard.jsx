@@ -1,6 +1,6 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
-import CurrencyFormat from "../components/CurrencyFormat/CurrencyFormat";
+import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import classes from "./Product.module.css";
 
 const ProductCard = ({ product }) => {
@@ -15,11 +15,11 @@ const ProductCard = ({ product }) => {
         <h3>
           {title}
         </h3>
-        <div className={classes?.rating}>
+        <div className={classes.rating}>
           <Rating value={5} precision={0.1} />
           {/* price */}
           <small>
-            {rating?.count}
+            {rating.count}
           </small>
         </div>
         <div>

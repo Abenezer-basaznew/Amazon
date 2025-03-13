@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./CarouselEffect.module.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { carouselImg } from "../CarouselEffect/data";
+import { img } from "./data";
 
 function CarouselEffect() {
   return (
@@ -14,9 +14,11 @@ function CarouselEffect() {
         showIndicators={true}
         showArrows={true}
       >
-        {carouselImg.map(img => {
-          return <img src={img} alt="image-of-item" />;
-        })}
+        {
+          img.map(imageItemLink => {
+          return <img src={imageItemLink} />;
+        })
+        }
       </Carousel>
       <div className={styles.hero__img} />
     </div>
